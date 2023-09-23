@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        .navbar-brand {
+            font-size: 20px;
+        }
+
+        .navbar-nav .nav-link {
+            margin-right: 80px;
+            color: white;
+            font-size: 20px;
+        }
+
+        .sidebar {
+            background-color: #333;
+            color: white;
+            height: 100vh;
+            width: 250px;
+            position: fixed;
+            top: 7.4rem;
+            right: 0;
+            z-index: 1;
+            padding: 20px;
+        }
+
+        .btn-white {
+            color: white;
+        }
+
+        .btn-white:hover {
+            color: black;
+        }
+
+        .center-content {
+            display: flex;
+            justify-content: center;
+            padding-right: 250px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #0dcaf0">
+        <div class="container d-flex justify-content-center">
+            <a class="navbar-brand" style="color: black;">Ethnus Layout</a>
+        </div>
+    </nav>
+
+    <div class="sidebar">
+        <h4>Sidebar</h4>
+        <p>This is a sidebar.</p>
+    </div>
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #a1a0a5">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#">Home</a>
+                <a class="nav-item nav-link" href="#">Menu</a>
+                <a class="nav-item nav-link" href="#">About</a>
+                <a class="nav-item nav-link" href="#">Contact</a>
+            </div>
+        </div>
+
+        <form class="form-inline">
+            <button class="btn btn-white" type="button">SIGNUP</button>
+            <button class="btn btn-white" type="button">LOGIN</button>
+        </form>
+    </nav>
+
+    <div class="center-content">
+        <p>Write Your Content Here!</p>
+    </div>
+
+</body>
+</html>
