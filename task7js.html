@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Image Right</title>
+    <style>
+        #myimg {
+            position: relative;
+            left: 0;
+            transition: left 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <img id="myimg" src="train.png" alt="Train Image" />
+        <center>
+            <p>Click the below button to move the image right</p>
+            <input type="button" value="Click Me" onclick="moveRight();" />
+        </center>
+    </form>
+
+    <script>
+        function moveRight() {
+            const img = document.getElementById('myimg');
+            const currentLeft = parseInt(getComputedStyle(img).left, 10);
+            const newPosition = currentLeft + 50; // Adjust the value as needed
+            img.style.left = newPosition + 'px';
+        }
+    </script>
+</body>
+</html>

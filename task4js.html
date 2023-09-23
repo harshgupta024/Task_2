@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Current Date and Time</h1>
+    <p id="date"></p>
+    <p id="time" style="display: none;"></p>
+    <button id="showDateButton">Show Date</button>
+    <button id="showTimeButton">Show Time</button>
+  
+    <script>
+        function showDate() {
+            const currentDate = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = currentDate.toLocaleDateString(undefined, options);
+            document.getElementById('date').textContent = 'Date: ' + formattedDate;
+        }
+  
+        function showTime() {
+            const currentTime = new Date();
+            const hours = currentTime.getHours();
+            const minutes = currentTime.getMinutes();
+            const seconds = currentTime.getSeconds();
+            const formattedTime = hours + ':' + (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+            document.getElementById('time').textContent = 'Time: ' + formattedTime;
+            document.getElementById('time').style.display = 'block';
+        }
+
+        document.getElementById('showDateButton').addEventListener('click', function() {
+            showDate();
+        });
+  
+        document.getElementById('showTimeButton').addEventListener('click', function() {
+            showTime();
+        });
+    </script>  
+</body>
+</html>
